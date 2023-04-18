@@ -42,3 +42,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# temporary files
+.wundergraph/.tmp/
