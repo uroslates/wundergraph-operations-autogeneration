@@ -21495,11 +21495,7 @@
               },
               "imageType": {
                   "type": "string",
-                  "description": "Type of the image, can be PRIMARY or GALLERY",
-                  "enum": [
-                      "PRIMARY",
-                      "GALLERY"
-                  ]
+                  "description": ""
               },
               "url": {
                   "type": "string",

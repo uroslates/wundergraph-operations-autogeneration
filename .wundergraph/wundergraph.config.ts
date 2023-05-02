@@ -14,6 +14,19 @@ const occ = introspect.openApi({
 		filePath: '../specs/occ.json',
 	},
 	baseURL: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/occ/v2/',
+	schemaExtension: `
+				enum Image_imageType {
+					PRIMARY,
+					GALLERY
+				}
+    `,
+		replaceCustomScalarTypeFields: [
+			{
+				entityName: 'Image',
+				fieldName: 'imageType',
+				responseTypeReplacement: 'Image_imageType',
+			},
+		]
 });
 
 // configureWunderGraph emits the configuration

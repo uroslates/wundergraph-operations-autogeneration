@@ -32,6 +32,14 @@ Test the operation by calling the generated operations REST endpoints:
 
 You could now also consume custom `auto-generated occ operations` within the ts based operations (look at the [.wundergraph/operations/users/get.ts](.wundergraph/operations/users/get.ts)).
 
+### Quick Fix for OCC Image.imageType enum Issue
+
+With changes introduced here (minor schema modifications and wundergraph configuration adjustments) we are now able to retrieve and **imageType** enum value when quering OCC APIs. To test it run the application and try reaching the [follwoing API Endpoint](http://localhost:9991/operations/custom_getProduct) and verify the existence of *imageType* property in response:
+
+```sh
+curl http://localhost:9991/operations/custom_getProduct
+```
+
 ### Auto-Generate graphql operations from countries apiNamespace
 
 For autogenerating `countries` `apiNamespace` graphqul operations, run the following:
@@ -65,7 +73,3 @@ Read the [Docs](https://wundergraph.com/docs).
 ## Deploy to WunderGraph Cloud
 
 [![Deploy to WunderGraph](https://wundergraph.com/button)](https://cloud.wundergraph.com/new/clone?templateName=simple)
-
-## Need Help?
-
-Got any questions or need any development related work feel free to [contact me](mailto:uroslates@gmail.com).
